@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartGranary — 5-Slide Pitch Deck</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050d08; color: #f8faf9; }
+    .slide-aspect { aspect-ratio: 16 / 9; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between p-4 md:p-8">
+
+  <!-- Header Navigation -->
+  <header class="max-w-6xl w-full mx-auto flex items-center justify-between pb-4 border-b border-emerald-950/80">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl bg-emerald-800 flex items-center justify-center text-white font-bold text-lg shadow-md">
+        🌾
+      </div>
+      <div>
+        <h1 class="font-bold text-base text-white tracking-tight flex items-center gap-2">
+          <span>SmartGranary</span>
+          <span class="text-[10px] uppercase font-semibold px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">
+            5-Slide Deck
+          </span>
+        </h1>
+        <p class="text-xs text-slate-400">Intelligent Agricultural Storage & Inventory Management</p>
+      </div>
+    </div>
+
+    <!-- Slide Indicators -->
+    <div class="flex items-center gap-3">
+      <div id="counter" class="text-xs font-mono font-bold bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800 text-slate-300">
+        Slide <span id="slideNum" class="text-emerald-400">1</span> of 5
+      </div>
+      <button onclick="toggleNotes()" class="text-xs px-3 py-1.5 rounded-lg bg-emerald-950 hover:bg-emerald-900 border border-emerald-800 text-emerald-300 font-semibold transition">
+        Speaker Notes & Q&A [N]
+      </button>
+    </div>
+  </header>
+
+  <!-- 16:9 Slide Stage -->
+  <main class="max-w-6xl w-full mx-auto my-auto py-6">
+    <div class="slide-aspect w-full bg-gradient-to-br from-[#0c2416] via-[#08180e] to-[#040c07] border border-emerald-900/60 rounded-2xl shadow-2xl p-8 md:p-12 flex flex-col justify-between relative overflow-hidden">
+
+      <!-- SLIDE 1 -->
+      <div id="slide-1" class="slide-content h-full flex flex-col justify-between">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-800">
+            THE POST-HARVEST DILEMMA
+          </span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight mt-3">
+            When Harvest Ends, <span class="text-emerald-400">Storage Begins.</span>
+          </h2>
+          <p class="text-slate-300 text-sm md:text-base mt-2 font-light max-w-2xl">
+            Managing stored agricultural produce is more than knowing how much is left.
+          </p>
+        </div>
+
+        <!-- 5-Step Process Flow -->
+        <div class="grid grid-cols-5 gap-3 my-auto py-4">
+          <div class="p-3 rounded-xl bg-slate-900/60 border border-emerald-900/60 text-center">
+            <span class="text-[10px] font-mono text-emerald-400 font-bold">01</span>
+            <h4 class="text-xs font-bold text-white mt-1">HARVEST</h4>
+            <p class="text-[10px] text-slate-400 mt-0.5 leading-snug">Multiple crops reaped across seasons</p>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900/60 border border-emerald-900/60 text-center">
+            <span class="text-[10px] font-mono text-emerald-400 font-bold">02</span>
+            <h4 class="text-xs font-bold text-white mt-1">STORAGE</h4>
+            <p class="text-[10px] text-slate-400 mt-0.5 leading-snug">Grains moved to silos & granaries</p>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900/60 border border-emerald-900/60 text-center">
+            <span class="text-[10px] font-mono text-emerald-400 font-bold">03</span>
+            <h4 class="text-xs font-bold text-white mt-1">DIFFERENT AGES</h4>
+            <p class="text-[10px] text-slate-400 mt-0.5 leading-snug">Lots accumulate varying storage days</p>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900/60 border border-emerald-900/60 text-center">
+            <span class="text-[10px] font-mono text-emerald-400 font-bold">04</span>
+            <h4 class="text-xs font-bold text-white mt-1">MANUAL TRACKING</h4>
+            <p class="text-[10px] text-slate-400 mt-0.5 leading-snug">Paper logs obscure shelf-life risk</p>
+          </div>
+          <div class="p-3 rounded-xl bg-rose-950/40 border border-rose-700/60 text-center">
+            <span class="text-[10px] font-mono text-rose-400 font-bold">05</span>
+            <h4 class="text-xs font-bold text-rose-200 mt-1">DELAYED ACTION</h4>
+            <p class="text-[10px] text-rose-300 mt-0.5 leading-snug">Unclear when to sell vs. hold</p>
+          </div>
+        </div>
+
+        <!-- 3 Problem Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t border-emerald-950">
+          <div class="p-3.5 rounded-xl bg-slate-900/50 border border-slate-800">
+            <span class="text-xs font-bold text-emerald-400">• Invisible Longevity</span>
+            <p class="text-[11px] text-slate-300 mt-1 leading-relaxed">Multiple crops stored for different durations without a unified view of aging stock.</p>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-900/50 border border-slate-800">
+            <span class="text-xs font-bold text-amber-400">• Microclimate Vulnerability</span>
+            <p class="text-[11px] text-slate-300 mt-1 leading-relaxed">Unchecked humidity spikes accelerate moisture migration, spoilage, and fungal risks.</p>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-900/50 border border-slate-800">
+            <span class="text-xs font-bold text-rose-400">• Compounded Holding Risk</span>
+            <p class="text-[11px] text-slate-300 mt-1 leading-relaxed">Manual guesswork makes prioritization difficult. Delayed decisions cause avoidable storage loss.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2 -->
+      <div id="slide-2" class="slide-content h-full flex flex-col justify-between hidden">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-800">
+            DECISION-SUPPORT PLATFORM
+          </span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight mt-3">
+            Meet <span className="text-emerald-400">SmartGranary</span>
+          </h2>
+          <p class="text-slate-300 text-sm md:text-base mt-2 font-light">
+            From inventory tracking to actionable storage decisions.
+          </p>
+        </div>
+
+        <!-- Central Architecture Banner -->
+        <div class="p-4 rounded-xl bg-gradient-to-r from-emerald-950/80 via-slate-900 to-emerald-950/80 border border-emerald-800 my-auto text-center">
+          <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider">
+            CROP INVENTORY + HARVEST DATE + QUANTITY + STORAGE CONDITIONS
+          </p>
+          <div class="my-1.5 flex items-center justify-center gap-2 text-emerald-400 font-extrabold text-sm md:text-base">
+            <span>➔</span>
+            <span class="px-4 py-1 rounded-lg bg-emerald-800 text-white shadow-md">SMART DECISION ENGINE</span>
+            <span>➔</span>
+          </div>
+          <p class="text-xs font-bold text-emerald-300 uppercase tracking-wider">
+            SELL FIRST &bull; REVIEW SOON &bull; CONTINUE MONITORING &bull; INSPECT STORAGE
+          </p>
+        </div>
+
+        <!-- 6 Pillars -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3.5">
+          <div class="p-3 rounded-lg bg-slate-900/60 border border-emerald-950">
+            <span class="text-xs font-bold text-emerald-400">✔ Inventory Management</span>
+            <p class="text-[11px] text-slate-400 mt-0.5">Track batch weight, harvest dates, and storage locations.</p>
+          </div>
+          <div class="p-3 rounded-lg bg-slate-900/60 border border-emerald-950">
+            <span class="text-xs font-bold text-emerald-400">✔ Storage-Age Tracking</span>
+            <p class="text-[11px] text-slate-400 mt-0.5">Auto-calculates elapsed days from harvest timestamps.</p>
+          </div>
+          <div class="p-3 rounded-lg bg-slate-900/60 border border-emerald-950">
+            <span class="text-xs font-bold text-emerald-400">✔ Condition Monitoring</span>
+            <p class="text-[11px] text-slate-400 mt-0.5">Track temperature, humidity, and storage utilization.</p>
+          </div>
+          <div class="p-3 rounded-lg bg-slate-900/60 border border-emerald-950">
+            <span class="text-xs font-bold text-emerald-400">✔ Priority Classification</span>
+            <p class="text-[11px] text-slate-400 mt-0.5">Categorizes batches as Stable, Aging, or Priority.</p>
+          </div>
+          <div class="p-3 rounded-lg bg-slate-900/60 border border-emerald-950">
+            <span class="text-xs font-bold text-emerald-400">✔ Decision Support</span>
+            <p class="text-[11px] text-slate-400 mt-0.5">Surfaces actionable advice (Sell First vs. Hold).</p>
+          </div>
+          <div class="p-3 rounded-lg bg-slate-900/60 border border-emerald-950">
+            <span class="text-xs font-bold text-emerald-400">✔ Visual Dashboard</span>
+            <p class="text-[11px] text-slate-400 mt-0.5">Single-pane view engineered for live farm operations.</p>
+          </div>
+        </div>
+
+        <div class="pt-3 border-t border-emerald-950 flex items-center justify-between text-xs">
+          <span class="font-semibold text-emerald-300 italic text-sm">"Know what you have. Know what needs attention."</span>
+          <span class="text-slate-400 text-[11px]">Configurable transparent rules &bull; MVP</span>
+        </div>
+      </div>
+
+      <!-- SLIDE 3 -->
+      <div id="slide-3" class="slide-content h-full flex flex-col justify-between hidden">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-800">
+            TRANSPARENT DECISION ENGINE
+          </span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight mt-3">
+            From Stored Crops to <span class="text-emerald-400">Smart Decisions</span>
+          </h2>
+          <p class="text-slate-300 text-sm md:text-base mt-2 font-light">
+            A transparent 5-step rule pipeline translating dates and conditions into priority rankings.
+          </p>
+        </div>
+
+        <!-- 5 Steps -->
+        <div class="grid grid-cols-5 gap-2.5 my-auto">
+          <div class="p-3 rounded-xl bg-slate-900/80 border border-emerald-900/60">
+            <span class="w-5 h-5 rounded-full bg-emerald-800 text-white font-mono text-[10px] font-bold flex items-center justify-center">1</span>
+            <h4 class="text-xs font-bold text-white mt-2">ADD CROP</h4>
+            <p class="text-[10px] text-slate-400 mt-0.5">Crop + Quantity + Harvest Date</p>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900/80 border border-emerald-900/60">
+            <span class="w-5 h-5 rounded-full bg-emerald-800 text-white font-mono text-[10px] font-bold flex items-center justify-center">2</span>
+            <h4 class="text-xs font-bold text-white mt-2">CALCULATE AGE</h4>
+            <p class="text-[10px] text-slate-400 mt-0.5">Current Date - Harvest Date</p>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900/80 border border-emerald-900/60">
+            <span class="w-5 h-5 rounded-full bg-emerald-800 text-white font-mono text-[10px] font-bold flex items-center justify-center">3</span>
+            <h4 class="text-xs font-bold text-white mt-2">ANALYZE STATUS</h4>
+            <p class="text-[10px] text-slate-400 mt-0.5">Stable / Aging / Priority</p>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900/80 border border-emerald-900/60">
+            <span class="w-5 h-5 rounded-full bg-emerald-800 text-white font-mono text-[10px] font-bold flex items-center justify-center">4</span>
+            <h4 class="text-xs font-bold text-white mt-2">CHECK STORAGE</h4>
+            <p class="text-[10px] text-slate-400 mt-0.5">Temp / Humidity / Capacity</p>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900/80 border border-emerald-900/60">
+            <span class="w-5 h-5 rounded-full bg-emerald-800 text-white font-mono text-[10px] font-bold flex items-center justify-center">5</span>
+            <h4 class="text-xs font-bold text-white mt-2">RECOMMEND</h4>
+            <p class="text-[10px] text-slate-400 mt-0.5">Sell / Review / Monitor / Inspect</p>
+          </div>
+        </div>
+
+        <!-- Demonstration Pair -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-3.5 rounded-xl bg-rose-950/30 border border-rose-800/60 flex items-center justify-between">
+            <div>
+              <span class="font-bold text-white text-sm">🔴 Maize (800 kg) &bull; 298 days stored</span>
+              <p class="text-xs text-rose-300 mt-0.5">&gt; 270d cutoff ➔ HIGH PRIORITY</p>
+            </div>
+            <span class="text-xs font-bold text-white px-3 py-1 rounded bg-rose-900/80 border border-rose-700">
+              Review / Sell First
+            </span>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-emerald-950/30 border border-emerald-800/60 flex items-center justify-between">
+            <div>
+              <span class="font-bold text-white text-sm">🟢 Rice (2,000 kg) &bull; 77 days stored</span>
+              <p class="text-xs text-emerald-300 mt-0.5">&le; 90d safe ➔ LOW PRIORITY</p>
+            </div>
+            <span class="text-xs font-bold text-white px-3 py-1 rounded bg-emerald-900/80 border border-emerald-700">
+              Continue Monitoring
+            </span>
+          </div>
+        </div>
+
+        <div class="pt-3 border-t border-emerald-950 flex items-center justify-between text-[11px] text-slate-400">
+          <span class="italic">* Prototype decision rules use transparent, configurable thresholds (calibrated for live demonstration).</span>
+          <span class="text-emerald-400 font-mono">No unexplainable black-box claims</span>
+        </div>
+      </div>
+
+      <!-- SLIDE 4 -->
+      <div id="slide-4" class="slide-content h-full flex flex-col justify-between hidden">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-800">
+            LIVE SOFTWARE VALIDATION
+          </span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight mt-3">
+            A Working Prototype, <span class="text-emerald-400">Not Just an Idea</span>
+          </h2>
+          <p class="text-slate-300 text-sm mt-1 font-light">
+            Demonstrated live today at http://localhost:5174/ with real-time UI states and simulated conditions.
+          </p>
+        </div>
+
+        <!-- Mockup Card -->
+        <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-700/80 my-auto space-y-3">
+          <div class="grid grid-cols-4 gap-2.5">
+            <div class="p-2 rounded bg-slate-800 border border-slate-700 text-center">
+              <span class="text-[9px] uppercase font-bold text-slate-400 block">TOTAL STOCK</span>
+              <span class="text-base font-extrabold text-white font-mono">4.5 Tons</span>
+            </div>
+            <div class="p-2 rounded bg-slate-800 border border-slate-700 text-center">
+              <span class="text-[9px] uppercase font-bold text-slate-400 block">CROP TYPES</span>
+              <span class="text-base font-extrabold text-white font-mono">4</span>
+            </div>
+            <div class="p-2 rounded bg-slate-800 border border-amber-900/40 text-center">
+              <span class="text-[9px] uppercase font-bold text-amber-400 block">NEEDS ATTENTION</span>
+              <span class="text-base font-extrabold text-amber-400 font-mono">2</span>
+            </div>
+            <div class="p-2 rounded bg-slate-800 border border-slate-700 text-center">
+              <span class="text-[9px] uppercase font-bold text-slate-400 block">STORAGE UTILIZATION</span>
+              <span class="text-base font-extrabold text-teal-400 font-mono">72%</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 text-xs">
+            <div class="p-3 rounded bg-slate-800/60 border border-slate-700 space-y-1">
+              <span class="text-[10px] font-bold text-slate-400 uppercase">Current Inventory Lots</span>
+              <p>🌾 Rice — 2,000 kg — <span class="text-emerald-400 font-bold">Stable</span> (Continue Monitoring)</p>
+              <p>🌾 Wheat — 1,200 kg — <span class="text-amber-400 font-bold">Aging</span> (Review Soon)</p>
+              <p>🌽 Maize — 800 kg — <span class="text-rose-400 font-bold">Priority</span> (Review / Sell First)</p>
+              <p>🥜 Groundnut — 500 kg — <span class="text-emerald-400 font-bold">Stable</span> (Continue Monitoring)</p>
+            </div>
+            <div class="p-3 rounded bg-slate-800/60 border border-slate-700 space-y-1">
+              <span class="text-[10px] font-bold text-slate-400 uppercase">Storage Conditions Simulation</span>
+              <p>Temperature: 28°C (Normal) &bull; Capacity: 72%</p>
+              <p>Relative Humidity: 72% Moderate</p>
+              <div class="p-2 mt-1 rounded bg-rose-950/60 border border-rose-800 text-[10px] text-rose-200">
+                ⚠️ <strong>Simulate 82%:</strong> "Storage inspection recommended"
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-2 border-t border-emerald-950 flex items-center justify-between text-[11px] text-slate-400">
+          <span class="italic">* Prototype data used for demonstration. Fully interactive local software.</span>
+          <span class="text-emerald-400 font-mono">Tested with 0 build errors</span>
+        </div>
+      </div>
+
+      <!-- SLIDE 5 -->
+      <div id="slide-5" class="slide-content h-full flex flex-col justify-between hidden">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-800">
+            OUTCOMES & FUTURE HORIZONS
+          </span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight mt-3">
+            Building a Smarter <span class="text-emerald-400">Storage Network</span>
+          </h2>
+          <p class="text-slate-300 text-sm mt-1 font-light">
+            Empowering farmers with objective storage longevity intelligence.
+          </p>
+        </div>
+
+        <!-- Benefits & Roadmap -->
+        <div class="grid grid-cols-2 gap-6 my-auto">
+          <div class="p-4 rounded-xl bg-slate-900/60 border border-emerald-950 space-y-2">
+            <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Immediate Expected Benefits</h4>
+            <ul class="space-y-1 text-xs text-slate-300">
+              <li>✔ Better inventory visibility across all granary bays</li>
+              <li>✔ Earlier identification of aging stock before degrade</li>
+              <li>✔ Improved storage microclimate monitoring & aeration alerts</li>
+              <li>✔ More informed, timely selling vs. holding decisions</li>
+              <li>✔ Reduced risk of avoidable post-harvest storage losses</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-900/60 border border-emerald-950 space-y-1.5">
+            <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-wider">5-Phase Strategic Roadmap</h4>
+            <div class="space-y-1 text-[11px]">
+              <div class="p-1 rounded bg-emerald-950/80 border border-emerald-800 text-white font-medium flex justify-between">
+                <span>Phase 1: Digital Granary Management</span>
+                <span class="text-emerald-300 font-bold">CURRENT MVP</span>
+              </div>
+              <div class="p-1 rounded bg-slate-800/40 text-slate-300 flex justify-between">
+                <span>Phase 2: IoT Temp & Humidity Sensor Probes</span>
+                <span class="text-slate-500">Hardware</span>
+              </div>
+              <div class="p-1 rounded bg-slate-800/40 text-slate-300 flex justify-between">
+                <span>Phase 3: Real-Time Mandi Market Integration</span>
+                <span class="text-slate-500">Pricing</span>
+              </div>
+              <div class="p-1 rounded bg-slate-800/40 text-slate-300 flex justify-between">
+                <span>Phase 4: Demand & Price Fluctuation Forecasting</span>
+                <span class="text-slate-500">Analytics</span>
+              </div>
+              <div class="p-1 rounded bg-slate-800/40 text-slate-300 flex justify-between">
+                <span>Phase 5: AI-Powered Multi-Granary Optimization</span>
+                <span class="text-slate-500">Optimization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-3 border-t border-emerald-950 flex items-center justify-between">
+          <p class="text-sm font-semibold text-emerald-300 italic">
+            "Don't just store the harvest. Understand it, monitor it, and make better decisions."
+          </p>
+          <span class="text-xs text-slate-400 font-mono">Cultivating Solutions 2026</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Speaker Notes & Judge Q&A Panel -->
+  <div id="notesPanel" class="max-w-6xl w-full mx-auto bg-slate-900 border border-slate-800 rounded-xl p-4 mb-4 hidden">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+      <div class="md:col-span-2 space-y-1.5">
+        <span class="text-[10px] font-bold uppercase text-emerald-400 tracking-wider">Speaker Talk Track</span>
+        <p id="noteScript" class="text-slate-200 leading-relaxed font-sans"></p>
+        <p id="noteTip" class="text-emerald-400 text-[11px] pt-1"></p>
+      </div>
+      <div class="border-t md:border-t-0 md:border-l border-slate-800 md:pl-4 space-y-2">
+        <span class="text-[10px] font-bold uppercase text-amber-400 tracking-wider">Likely Judge Q&A</span>
+        <div id="judgeQA" class="space-y-2 text-[11px]"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <footer class="max-w-6xl w-full mx-auto flex items-center justify-between pt-2">
+    <div class="flex items-center gap-2">
+      <button onclick="goToSlide(1)" class="w-3 h-3 rounded-full bg-emerald-500 transition-all"></button>
+      <button onclick="goToSlide(2)" class="w-3 h-3 rounded-full bg-slate-700 transition-all"></button>
+      <button onclick="goToSlide(3)" class="w-3 h-3 rounded-full bg-slate-700 transition-all"></button>
+      <button onclick="goToSlide(4)" class="w-3 h-3 rounded-full bg-slate-700 transition-all"></button>
+      <button onclick="goToSlide(5)" class="w-3 h-3 rounded-full bg-slate-700 transition-all"></button>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <span class="text-xs text-slate-500 hidden sm:inline">Use [←] and [→] arrows or Spacebar</span>
+      <button onclick="prevSlide()" class="px-3.5 py-1.5 rounded-lg border border-slate-700 hover:bg-slate-800 text-xs font-semibold text-slate-300 transition">
+        Previous
+      </button>
+      <button onclick="nextSlide()" class="px-4 py-1.5 rounded-lg bg-emerald-800 hover:bg-emerald-700 text-xs font-semibold text-white shadow-sm transition">
+        Next
+      </button>
+    </div>
+  </footer>
+
+  <script>
+    let current = 1;
+    const total = 5;
+
+    const notes = [
+      {
+        script: "Judges, the moment harvest finishes, farmers face an invisible risk: storage duration. Storing grain isn't just about knowing how many bags are in the shed. Because crops enter granaries at different harvest dates and moisture levels, manual tracking leaves farmers guessing which lots are degrading, leading to delayed selling decisions and avoidable spoilage.",
+        tip: "Focus on the transition from production to storage: post-harvest value loss happens in storage, not the field.",
+        qa: [
+          { q: "What makes this different from a normal inventory system?", a: "SmartGranary goes beyond recording stock. It analyzes storage age, quantity and conditions to prioritize inventory and provide decision-support recommendations." }
+        ]
+      },
+      {
+        script: "Meet SmartGranary. We transform passive inventory tracking into actionable storage decision support. By combining harvest dates, crop quantities, and granary conditions into a transparent rule engine, SmartGranary categorizes stock into Stable, Aging, or Priority, advising farmers whether to sell first, review soon, continue monitoring, or inspect storage.",
+        tip: "Highlight our core motto: 'Know what you have. Know what needs attention.' Emphasize decision support over passive record-keeping.",
+        qa: [
+          { q: "Is this AI?", a: "The current MVP uses transparent rule-based decision logic. AI-based demand forecasting and inventory optimization are planned future components." }
+        ]
+      },
+      {
+        script: "Here is the 5-step workflow. First, the farmer records the crop batch and harvest timestamp. Second, the system automatically computes storage age in days. Third, transparent agronomic thresholds classify status. Fourth, environmental conditions like humidity are checked. Fifth, clear advisories are generated. For example, 298-day Maize is flagged as High Priority to Review / Sell First, while 77-day Rice remains under monitoring.",
+        tip: "Be explicit: this is a transparent rule-based engine, not an unexplainable AI black box. Thresholds are configurable.",
+        qa: [
+          { q: "How do you know when a crop should be sold?", a: "The prototype does not claim a universal selling date. It prioritizes inventory using configurable storage-age and condition rules. Future versions can incorporate crop-specific storage data and market information." }
+        ]
+      },
+      {
+        script: "This is not a slide mockup—this is our live, working React prototype running right now. As you can see, our KPI cards aggregate 4.5 Tons across 4 crop varieties with 72% storage utilization. Notice our FIFO-ranked Selling Priority and our interactive humidity simulation: when ambient humidity spikes to 82%, SmartGranary immediately triggers a granary inspection warning to protect aging inventory.",
+        tip: "Offer to show the live browser demo immediately following the pitch: 'We have the local application ready to test live if you'd like to see any scenario.'",
+        qa: [
+          { q: "Where does your data come from?", a: "The prototype uses simulated inventory data for demonstration. A production system can integrate real farm records, storage sensors and market data." }
+        ]
+      },
+      {
+        script: "By giving farmers visibility into storage longevity, SmartGranary prevents quality degrade and enables confident marketing. Our roadmap scales from today's digital decision-support MVP, to IoT hardware sensors in Phase 2, live mandi market pricing in Phase 3, and eventually predictive AI optimization in Phase 5. Don't just store the harvest—understand it and protect its value.",
+        tip: "End with conviction on the final statement: 'Don't just store the harvest. Understand it, monitor it, and make better decisions.'",
+        qa: [
+          { q: "Can this work for different crops?", a: "Yes. Crop-specific storage thresholds and conditions can be configured as the system expands." }
+        ]
+      }
+    ];
+
+    function updateSlide() {
+      for (let i = 1; i <= total; i++) {
+        document.getElementById(`slide-${i}`).classList.toggle('hidden', i !== current);
+      }
+      document.getElementById('slideNum').innerText = current;
+
+      const dots = document.querySelectorAll('footer button.rounded-full');
+      dots.forEach((dot, idx) => {
+        dot.className = `w-3 h-3 rounded-full transition-all ${idx + 1 === current ? 'bg-emerald-500 w-8' : 'bg-slate-700'}`;
+      });
+
+      const note = notes[current - 1];
+      document.getElementById('noteScript').innerText = `"${note.script}"`;
+      document.getElementById('noteTip').innerHTML = `<strong>Judge Tip:</strong> ${note.tip}`;
+
+      const qaBox = document.getElementById('judgeQA');
+      qaBox.innerHTML = note.qa.map(item => `
+        <div>
+          <p class="font-bold text-white">Q: ${item.q}</p>
+          <p class="text-slate-400 text-[10px] mt-0.5">A: ${item.a}</p>
+        </div>
+      `).join('');
+    }
+
+    function nextSlide() {
+      if (current < total) { current++; updateSlide(); }
+    }
+    function prevSlide() {
+      if (current > 1) { current--; updateSlide(); }
+    }
+    function goToSlide(n) {
+      current = n; updateSlide();
+    }
+    function toggleNotes() {
+      const p = document.getElementById('notesPanel');
+      p.classList.toggle('hidden');
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
+      else if (e.key === 'n' || e.key === 'N') { toggleNotes(); }
+    });
+
+    updateSlide();
+  </script>
+</body>
+</html>
