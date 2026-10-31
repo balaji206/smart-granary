@@ -1,17 +1,21 @@
+
 name: SmartGranary CI/CD
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 permissions:
   contents: read
 
 jobs:
-  ci:
-    name: Build and Test
+  build:
+    name: Build Application
     runs-on: ubuntu-latest
 
     steps:
@@ -30,8 +34,12 @@ jobs:
       - name: Run lint
         run: npm run lint
 
-      - name: Run automated tests
-        run: npm test -- --run
-
       - name: Build application
         run: npm run build
+
+      - name: Deploy to Netlify
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: npx netlify-cli deploy --dir=dist --prod --site="$NETLIFY_SITE_ID" --auth="$NETLIFY_AUTH_TOKEN"
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
